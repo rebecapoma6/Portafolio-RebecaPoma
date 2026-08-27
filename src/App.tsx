@@ -1,3 +1,4 @@
+import About from "./components/About";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -11,10 +12,10 @@ export default function App() {
       <main className="container mx-auto px-4 py-8">
         <Hero/>
         <Projects />
-        {/* <About />
-        <TechStack /> */}
+        <About />
+        <TechStack />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
