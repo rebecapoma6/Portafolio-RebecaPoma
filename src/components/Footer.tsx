@@ -1,5 +1,4 @@
 import { buttonVariants } from "@/components/ui/button"
-// Importamos los íconos de FontAwesome (Fa)
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"
 
 export default function Footer() {
@@ -34,7 +33,7 @@ export default function Footer() {
             <FaGithub className="h-5 w-5" />
           </a>
 
-          {/* Correo (Pon tu correo real aquí) */}
+          {/* Correo */}
           <a 
             href="mailto:tu-correo@gmail.com" 
             className={buttonVariants({ variant: "ghost", size: "icon" })}

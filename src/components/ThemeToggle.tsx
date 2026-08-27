@@ -3,7 +3,6 @@ import { useThemeStore } from "@/store/useThemeStore"
 import { Button } from "@/components/ui/button"
 
 export function ThemeToggle() {
-  // Nos traemos el estado y la función para cambiarlo
   const { theme, toggleTheme } = useThemeStore()
 
   return (
