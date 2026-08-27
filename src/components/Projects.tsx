@@ -12,8 +12,17 @@ const misProyectos = [
         demoEnlace: "https://smart-pantry-omega.vercel.app/",
         codigoEnlace: "https://github.com/rebecapoma6/SmartPantry"
     },
-    {
+     {
         id: 2,
+        titulo: "Recopilación Vídeos y VideoJuegos",
+        imagen: "/Imagenes/RecopilacionLogo.png",
+        descripcion: "Biblioteca personal de libros y videojuegos.",
+        tecnologias: ["React", "Tailwind CSS", "Supabase"],
+        demoEnlace: "https://recopilacion-storyplay.vercel.app/",
+        codigoEnlace: "https://github.com/rebecapoma6/RecopilacionProyecto"
+    },
+    {
+        id: 3,
         titulo: "Api Gasolinera",
         imagen: "/Imagenes/ApiGasolinera.jpg",
         descripcion: "Consumo de API REST para visualizar información de gasolineras.",
@@ -22,7 +31,7 @@ const misProyectos = [
         codigoEnlace: "https://github.com/rebecapoma6/ApiGasolinera/blob/main/script.js"
     },
     {
-        id: 3,
+        id: 4,
         titulo: "Aventura en el Reino JS",
         imagen: "/Imagenes/reinoJs.jpg",
         descripcion: "Juego de rol interactivo por turnos con persistencia en LocalStorage.",
