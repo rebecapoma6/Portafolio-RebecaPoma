@@ -1,6 +1,9 @@
+import { useLanguageStore } from "@/store/useLanguageStore";
 import { motion } from "framer-motion"
 
 export default function About() {
+  const { t } = useLanguageStore();
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -26,21 +29,13 @@ export default function About() {
         viewport={{ once: true, margin: "-50px" }}
       >
         <motion.h2 variants={item} className="text-3xl font-bold mb-6 text-center text-primary">
-          Sobre mí
+          {t.about.title}
         </motion.h2>
         
         <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-          <motion.p variants={item}>
-            Soy <span className="font-semibold text-foreground">Rebeca Poma</span>, Desarrolladora Web con un enfoque fuerte en el Frontend. Mi ruta en la tecnología comenzó con un Bootcamp intensivo de 850 horas y se consolidó al graduarme del Grado Superior (DAW) en <span className="text-primary font-medium">modalidad Dual</span>.
-          </motion.p>
-          
-          <motion.p variants={item}>
-            Esta formación me permitió ganar experiencia real desarrollando soluciones y adaptándome a arquitecturas empresariales desde el primer día. Además, cuento con años de experiencia laboral previa en el sector financiero, lo que me ha dado una base súper sólida en atención al detalle, resiliencia y resolución de problemas bajo presión.
-          </motion.p>
-          
-          <motion.p variants={item}>
-            Me apasiona construir interfaces modernas y eficientes. Hoy busco seguir creciendo en el desarrollo web, aportando mi madurez profesional y mi capacidad para adaptarme rápido a nuevas tecnologías en cada proyecto.
-          </motion.p>
+          <motion.p variants={item} dangerouslySetInnerHTML={{ __html: t.about.p1 }} />
+          <motion.p variants={item} dangerouslySetInnerHTML={{ __html: t.about.p2 }} />
+          <motion.p variants={item} dangerouslySetInnerHTML={{ __html: t.about.p3 }} />
         </div>
       </motion.div>
     </section>

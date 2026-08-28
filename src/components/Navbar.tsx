@@ -3,10 +3,12 @@ import { Button, buttonVariants } from "@/components/ui/button"
 import { ThemeToggle } from "./ThemeToggle"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { motion, AnimatePresence } from "framer-motion"
+import { useLanguageStore } from "@/store/useLanguageStore"
+import { LanguageToggle } from "./LanguageToggle"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-
+  const { t } = useLanguageStore()
   const toggleMenu = () => setIsOpen(!isOpen)
   const closeMenu = () => setIsOpen(false)
 
@@ -14,7 +16,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
 
-        {/* Tu Logo */}
+        {/*Logo */}
         <div className="flex items-center gap-2">
           <img src="/Imagenes/logo.png" alt="Logo Rebeca" className="h-8 w-auto" />
           <span className="font-bold text-xl tracking-tight">Rebeca Poma</span>
@@ -22,17 +24,18 @@ export default function Navbar() {
 
         <nav className="hidden md:flex gap-6">
           <a href="#proyectos" className="relative text-sm font-medium transition-colors hover:text-primary after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full">
-            Mis Proyectos
+            {t.nav.projects}
           </a>
           <a href="#sobremi" className="relative text-sm font-medium transition-colors hover:text-primary after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full">
-            Sobre mí
+            {t.nav.about}
           </a>
           <a href="#tecnologias" className="relative text-sm font-medium transition-colors hover:text-primary after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full">
-            Tecnologías
+            {t.nav.tech}
           </a>
         </nav>
 
         <div className="flex items-center gap-2 md:gap-4">
+          <LanguageToggle />
           <ThemeToggle />
 
           <div className="hidden md:block">
@@ -40,11 +43,11 @@ export default function Navbar() {
               href="mailto:mrebecapoma.6@gmail.com?subject=Oportunidad%20Laboral%20-%20Portafolio"
               className={buttonVariants({ variant: "default" })}
             >
-              Contáctame
+              {t.nav.contact}
             </a>
           </div>
 
-          {/*Hamburguesa*/}
+          {/* Hamburguesa */}
           <Button
             variant="ghost"
             size="icon"
@@ -68,20 +71,21 @@ export default function Navbar() {
           >
             <div className="flex flex-col px-6 py-6 gap-6 text-center">
               <a href="#proyectos" onClick={closeMenu} className="text-base font-medium hover:text-primary transition-colors">
-                Mis Proyectos
+                {t.nav.projects}
               </a>
               <a href="#sobremi" onClick={closeMenu} className="text-base font-medium hover:text-primary transition-colors">
-                Sobre mí
+                {t.nav.about}
               </a>
               <a href="#tecnologias" onClick={closeMenu} className="text-base font-medium hover:text-primary transition-colors">
-                Tecnologías
+                {t.nav.tech}
               </a>
-              
+
               <a
                 href="mailto:mrebecapoma.6@gmail.com?subject=Oportunidad%20Laboral%20-%20Portafolio"
                 className={buttonVariants({ variant: "default", className: "w-full mt-2" })}
+                onClick={closeMenu} 
               >
-                Contáctame
+                {t.nav.contact}
               </a>
             </div>
           </motion.div>

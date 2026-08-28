@@ -1,6 +1,8 @@
+import { useLanguageStore } from "@/store/useLanguageStore";
 import { motion } from "framer-motion"
 
 export default function Hero() {
+  const { t } = useLanguageStore();
   return (
     <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 py-20 overflow-hidden">
       
@@ -11,10 +13,10 @@ export default function Hero() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
-          Bienvenidos a mi Portafolio
+          {t.hero.title}
         </h1>
         <p className="text-xl text-muted-foreground">
-          Diseño, desarrollo y creatividad
+          {t.hero.subtitle}
         </p>
       </motion.div>
       

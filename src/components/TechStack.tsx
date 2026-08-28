@@ -2,8 +2,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SiReact, SiTypescript, SiTailwindcss, SiJavascript, SiHtml5, SiCss, SiVite, SiFigma, SiSupabase, SiMysql, SiPostgresql, SiGithub } from "react-icons/si"
 import { FaJava, FaNodeJs, FaPython } from "react-icons/fa"
 import { motion } from "framer-motion"
+import { useLanguageStore } from "@/store/useLanguageStore" 
 
 export default function TechStack() {
+  const { t } = useLanguageStore();
+
   const skills = {
     frontend: [
       { name: "React", icon: <SiReact /> }, { name: "TypeScript", icon: <SiTypescript /> }, 
@@ -22,15 +25,16 @@ export default function TechStack() {
   }
 
   const secciones = [
-    { title: "Frontend Development", data: skills.frontend, col: "md:col-span-2" },
-    { title: "Backend", data: skills.backend, col: "" },
-    { title: "Bases de Datos", data: skills.database, col: "" },
-    { title: "Herramientas y Despliegue", data: skills.tools, col: "md:col-span-2" },
+    { title: t.tech.frontend, data: skills.frontend, col: "md:col-span-2" },
+    { title: t.tech.backend, data: skills.backend, col: "" },
+    { title: t.tech.db, data: skills.database, col: "" },
+    { title: t.tech.tools, data: skills.tools, col: "md:col-span-2" },
   ];
 
   return (
     <section id="tecnologias" className="py-20 overflow-hidden">
       
+      {/* Título principal*/}
       <motion.h2 
         className="text-3xl font-bold text-center mb-12"
         initial={{ opacity: 0, scale: 0.9 }}
@@ -38,7 +42,7 @@ export default function TechStack() {
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.5 }}
       >
-        Tecnologías
+        {t.tech.title}
       </motion.h2>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto px-4">
