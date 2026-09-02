@@ -11,6 +11,12 @@ const proyectosData = [
     demoEnlace: "https://smart-pantry-omega.vercel.app/",
     codigoEnlace: "https://github.com/rebecapoma6/SmartPantry"
   },
+   {
+    imagen: "/Imagenes/RecopilacionLogo.png",
+    tecnologias: ["React", "Tailwind CSS", "Supabase"],
+    demoEnlace: "https://recopilacion-storyplay.vercel.app/",
+    codigoEnlace: "https://github.com/rebecapoma6/RecopilacionProyecto"
+  },
   {
     imagen: "/Imagenes/ApiGasolinera.jpg",
     tecnologias: ["JavaScript", "HTML", "CSS"],
@@ -20,8 +26,8 @@ const proyectosData = [
   {
     imagen: "/Imagenes/reinoJs.jpg",
     tecnologias: ["JavaScript", "LocalStorage", "Módulos"],
-    demoEnlace: "https://rebecapoma6.github.io/reinoJsNew/",
-    codigoEnlace: "https://github.com/rebecapoma6/reinoJsNew/blob/main/main.js"
+    demoEnlace: "https://rebecapoma6.github.io/defensaReinoJs/",
+    codigoEnlace: "https://github.com/rebecapoma6/defensaReinoJs/tree/main"
   }
 ];
 

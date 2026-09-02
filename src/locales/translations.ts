@@ -18,6 +18,10 @@ export const translations = {
           descripcion: "Aplicación web móvil para gestionar el inventario de la despensa del hogar."
         },
         {
+          titulo: "Recopilación Vídeos y VideoJuegos",
+          descripcion: "Aplicación web móvil para gestionar,organizar y lleva el control de toda tu colección en un solo lugar."
+        },
+        {
           titulo: "Api Gasolinera",
           descripcion: "Consumo de API REST para visualizar información de gasolineras."
         },
@@ -52,6 +56,10 @@ export const translations = {
         {
           titulo: "SmartPantry",
           descripcion: "Mobile web application to manage and track the household pantry inventory."
+        },
+         {
+          titulo: "Video and Video Game Collection",
+          descripcion: "A mobile web app to manage, organize, and keep track of your entire collection in one place."
         },
         {
           titulo: "Gas Station API",
